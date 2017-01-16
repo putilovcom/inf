@@ -1,11 +1,59 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="stylesheets/test.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
 </head>
 <body>
-	<div class="newDiv"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus error animi nam sequi possimus nobis nisi, reprehenderit nemo tempore iure, facilis obcaecati id similique facere iste soluta blanditiis, totam libero.</p></div>
+	<script>
+// Выведите целые числа от 9 до 0 при помощи рекурсии
+// function recursion(n) {
+//   if(n >= 0) {
+//     console.log(n);
+//     recursion(n - 1);
+//   }
+// }
+// recursion(9);
+
+// Напишите функцию которая рандомно возвращает значение цвета в формате #FFFFFF
+ 	var color 		= "", // 
+    	rangeColor 	= "ABCDEF0123456789"; //объявляем диапазон цвета
+
+    for( var i=0; i < 6; i++ ){
+        color += rangeColor.charAt( 
+        	Math.floor(
+        		Math.random() * rangeColor.length));
+            }
+    // console.log('#'+color);
+// $('body').css('backgroundColor', '#'+color);
+
+
+// Создайте функцию которая сортирует массив объектов, задавая поле для сортировки.
+
+var mainArr = [
+			'Фрукт'		, 'Цвет'	, 'Вес'		, 'Размер',
+			['Яблоко'	,'Зеленый'	,200		,12],
+			['Банан'	,'Желтый'	,180		,18],
+			['Апельсин'	,'Оранжевый',250		,14],
+			['Виноград'	,'Красный'	,350		,40]
+];
+var choose = 'Вес';
+for (var i = 0; i < mainArr.length; i++) {
+	if (mainArr[i] == choose){
+		console.log('Мы нашли: ', choose, '. Его индекс в массиве: ', i);
+		console.log(mainArr[4][i]);
+	}
+	for (var j = 0; j < mainArr.length; j++) {
+		mainArr[i]
+	}
+}
+
+	</script>	
+
+	
+   
+
 </body>
 </html>
