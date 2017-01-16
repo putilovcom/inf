@@ -33,23 +33,44 @@
 // Создайте функцию которая сортирует массив объектов, задавая поле для сортировки.
 
 var mainArr = [
-			'Фрукт'		, 'Цвет'	, 'Вес'		, 'Размер',
+			['Фрукт'	,'Цвет'		,'Вес'		,'Размер'],
 			['Яблоко'	,'Зеленый'	,200		,12],
 			['Банан'	,'Желтый'	,180		,18],
 			['Апельсин'	,'Оранжевый',250		,14],
 			['Виноград'	,'Красный'	,350		,40]
 ];
-var choose = 'Вес';
-for (var i = 0; i < mainArr.length; i++) {
-	if (mainArr[i] == choose){
+
+var choose = 'Фрукт';
+// console.log(mainArr[0].length);
+for (var i = 0; i < mainArr[0].length; i++) {
+	if (mainArr[0][i] == choose){
 		console.log('Мы нашли: ', choose, '. Его индекс в массиве: ', i);
-		console.log(mainArr[4][i]);
-	}
-	for (var j = 0; j < mainArr.length; j++) {
-		mainArr[i]
+		 index = i;
 	}
 }
+		console.log(mainArr)
+for (var k = 1; k < mainArr.length; k++) {
+var min = k;
+	for (var j = k; j < mainArr.length; j++) {
+		// console.log(mainArr[j][index])
+		if (mainArr[j][index] < mainArr[min][index]) {
+			min = j;
+			var pr = mainArr[k];
+			mainArr[k] = mainArr[min];
+			mainArr[min] = pr;
+		}
+		// console.log(min)
+// console.log(mainArr[min][index]);
+	}
+	}
+	console.log(index);
+		console.log(mainArr)
 
+var numbers = [4, 40, 5, 50, 111];
+numbers.sort(function(a, b) {
+  return a - b;
+});
+console.log(numbers);
 	</script>	
 
 	
